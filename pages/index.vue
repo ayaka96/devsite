@@ -1,26 +1,11 @@
 <template>
   <div id="app">
 <navbar />
-  <!--nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <NuxtLink class="text-white px-3" to="/">home</NuxtLink>
-                </li>
-                <li class="nav-item">
-                    <NuxtLink class="text-white px-3" to="/blog">blog</NuxtLink>
-                </li>
-                </ul>
-            </div>
-    </nav-->
 
-    <div class="mainimg">
-              <img src="../assets/img/mainimg.jpg" alt="メイン画像">
-        </div>
+  <div class="mainimg">
+        <img src="../assets/img/mainimg.jpg" alt="メイン画像">
+  </div>
 
-
-
-        
   <main class="main">
 <section id="aboutme" style="margin-top: 100px; margin-bottom: 100px;" class="mx-4">
 

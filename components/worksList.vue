@@ -1,66 +1,31 @@
+
 <template>
 <div>
-<navbar />
-<!-- Navbarここまで -->
-
 <section>
   <div class="container">
-	<h2 class="catch">Works</h2>
-<div class="row">
-	<div class="col span-4">
-	<figure>
-		<img src="../assets/img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
-		</figure>
-	</div>
-	<div class="col span-4">
-	<figure>
-		<img src="../assets/img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
-		</figure>
-	</div>
-	<div class="col span-4">
-	<figure>
-		<img src="../assets/img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
-		</figure>
-	</div>
-    </div>    
-<div class="row">
-	<div class="col span-4">
-	<figure>
-		<img src="../assets/img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
-		</figure>
-	</div>
-	<div class="col span-4">
-	<figure>
-		<img src="../assets/img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
-		</figure>
-	</div>
-	<div class="col span-4">
-	<figure>
-		<img src="../assets/img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
-		</figure>
-	</div>
-    </div>
-        </div>
-</section>
 
-<!--worksList /-->
-
+<h2 class="catch">Works</h2>
+<div v-for="post of arranged" :key="post.slug" class="mx-auto" style="">
+<div class="row">
+<div class="col span-4">
+	<figure>
+		<img src="../assets/img/catch.jpg" alt="画像">
+		<figcaption>{{ post.title }}</figcaption>
+	</figure>
+</div>
+</div>
+</div>
 
 </div>
+</section>
+</div>
+
 </template>
 
 
 <script>
-import worksList from '../components/worksList';
 export default {
   components: {
-      //worksList
   },
   head() {
     return {
@@ -74,6 +39,22 @@ export default {
       posts,
     };
   },
+  computed: {
+      arranged: function () {
+      let dist = [[]];
+
+      this.raw.forEach((el, idx) => {
+        let tail = dist.length - 1;
+
+        dist[tail].push(el);
+
+        if (dist[tail].length > this.settings.slicePar - 1)
+          dist.push([]);
+      });
+
+      return dist;
+    }
+  }
 }
 </script>
 

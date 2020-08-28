@@ -1,49 +1,7 @@
 <template>
 <div>
-<!--nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <NuxtLink class="text-white px-3" to="/">home</NuxtLink>
-                </li>
-                <li class="nav-item">
-                    <NuxtLink class="text-white px-3" to="/blog">blog</NuxtLink>
-                </li>
-                </ul>
-            </div>
-        </nav-->
-<header>    
-<div class="container">
-<div class="row">
-    <div class="col span-12">
-    <div class="head">
-        <h1><a href="index.html">Ayaka Omura</a></h1>
-		<div class="snsbox">
-			<img src="../assets/img/in-icon.png" alt="Instagram">
-		    <img src="../assets/img/fb-icon.png" alt="Facebook"></div>
-        </div>
-    </div></div>
-    
-<div class="row">
-    <div class="col span-12">
-        <nav>
-        <div id="open"><img src="../assets/img/button.png"></div>
-        <div id="close"><img src="../assets/img/button2.png"></div>    
-            <div id="navi">
-        <ul>
-            <li><a href="/">ホーム</a></li>
-            <li><NuxtLink to="/blog">Blog</NuxtLink></li>
-            <!--li><a href="subpage.html">サブページ</a></li>
-            <li><a href="subpage.html">サブページ</a></li>
-            <li><a href="subpage.html">お問い合わせ</a></li-->
-            </ul>
-                </div>
-        </nav>
-    </div>
-        </div>
-    </div>
-    </header>
 
+<navbar />
 
 
 <!-- Navbarここまで -->
@@ -56,7 +14,6 @@
     tag="article"
     style="max-width: 40rem;"
     class="mb-2"
-    title=""
   >
   <h3>{{ post.title }}</h3>
     <b-card-text>
@@ -77,9 +34,10 @@
 
 
 <script>
-
+import navbar from '../components/navbar';
 export default {
   components: {
+      navbar
   },
   head() {
     return {
@@ -95,3 +53,586 @@ export default {
   },
 }
 </script>
+
+
+<style>
+/*
+ * grid
+ * version:v1.0
+ * Developer:popodesign
+ * URL:https://popo-design.net
+ */
+
+/* 全体の設定
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    color: #000;
+    font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+    background:#fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin:0;
+	padding:0;
+}
+
+/* グリッド
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 2.0rem;
+    position: relative;
+}
+/* ブロックを縦に表示 */
+.row {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+}
+.col {
+    display: block;
+    flex: 1 1 auto;
+    margin-left: 0;
+    max-width: 100%;
+    width: 100%;
+}
+/* 768px以上の表示 */
+@media ( min-width : 768px ) {
+.row {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+.col {
+    margin-left: 4%;
+}
+	
+.col:first-child { 
+    margin-left: 0; 
+}
+
+.row .col.span-1 {
+    flex: 0 0 4.66666666667%;
+    max-width: 4.66666666667%;
+}
+.row .col.span-2 {
+    flex: 0 0 13.3333333333%;
+    max-width: 13.3333333333%;
+}
+.row .col.span-3 {
+    flex: 0 0 22%;
+    max-width: 22%;
+}
+.row .col.span-4 {
+    flex: 0 0 30.6666666667%;
+    max-width: 30.6666666667%;
+}
+.row .col.span-5 {
+    flex: 0 0 39.3333333333%;
+    max-width: 39.3333333333%;
+}
+.row .col.span-6 {
+    flex: 0 0 48%;
+    max-width: 48%;
+}
+.row .col.span-7 {
+    flex: 0 0 56.6666666667%;
+    max-width: 56.6666666667%;
+}
+.row .col.span-8 {
+    flex: 0 0 65.3333333333%;
+    max-width: 65.3333333333%;
+}
+.row .col.span-9 {
+    flex: 0 0 74.0%;
+    max-width: 74.0%;
+}
+.row .col.span-10 {
+    flex: 0 0 82.6666666667%;
+    max-width: 82.6666666667%;
+}
+.row .col.span-11 {
+    flex: 0 0 91.3333333333%;
+    max-width: 91.3333333333%;
+}
+.row .col.span-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* オフセット */
+.row .col.offset-1 {
+    margin-left: 8.66666666667%;
+}
+.row .col.offset-2 {
+    margin-left: 17.3333333333%;
+}
+.row .col.offset-3 {
+    margin-left: 26%;
+}
+.row .col.offset-4 {
+    margin-left: 34.6666666667%;
+}
+.row .col.offset-5 {
+    margin-left: 43.333333333%;
+}
+.row .col.offset-6 {
+    margin-left: 52%;
+}
+.row .col.offset-7 {
+    margin-left: 60.6666666667%;
+}
+.row .col.offset-8 {
+    margin-left: 69.3333333333%;
+}
+.row .col.offset-9 {
+    margin-left: 78.0%;
+}
+.row .col.offset-10 {
+    margin-left: 86.6666666667%;
+}
+.row .col.offset-11 {
+    margin-left: 95.3333333333%;
+}    
+}
+
+
+/* 見出し
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;}
+h1 { font-size: 3.5rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.2rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+
+/* モバイル表示 */
+@media (min-width: 550px) {
+  h1 { font-size: 4.0rem; }
+  h2 { font-size: 3.5rem; }
+  h3 { font-size: 3.2rem; }
+  h4 { font-size: 3.0rem; }
+  h5 { font-size: 2.4rem; }
+  h6 { font-size: 1.5rem; }
+}
+
+p {
+  margin-top: 0; }
+
+
+/* リンク
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: #1EAEDB; }
+a:hover {
+  color: #0FA0CE; }
+
+
+/* ボタン
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  margin-right: 5px;
+  color: #555;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: none;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 1px solid #bbb;
+  border-radius: 0;
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+
+
+/* フォーム
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; 
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 0;
+  box-shadow: none;
+  box-sizing: border-box; }
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 100px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #666;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+
+
+/* リスト
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: circle inside; }
+ol {
+  list-style: decimal inside; }
+ol, ul {
+  padding-left: 0;
+  margin-top: 0; }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%; }
+li {
+  margin-bottom: 1rem; }
+
+
+/* コード
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  white-space: nowrap;
+  background: #F1F1F1;
+}
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre; 
+}
+
+
+/* テーブル
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+table {
+	border-collapse: collapse; }
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+
+
+/* スペース
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+  margin-bottom: 1rem; }
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem; }
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem; }
+
+
+/* 全幅
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.pull-right {
+  float: right; }
+.pull-left {
+  float: left; }
+
+
+/* 罫線
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-width: 0;
+  border-top: 1px solid #ccc; 
+}
+
+/*  ここからstyle.css  */
+
+@charset "UTF-8";
+/*@import url("grid.css");*/
+
+img {
+	max-width:100%;
+	height: auto;/*高さ自動*/
+}
+a {
+    display:block;
+    color: #666;
+    text-decoration-line: none;
+}
+a:hover { 
+    color: #999;
+}
+a img:hover {
+	opacity: 0.8;
+}
+.underline {
+	border-bottom: 3px solid #000;
+	padding-bottom: 0.5rem;
+}
+.center {
+	text-align: center;
+}
+
+/*ヘッダー
+-------------------------------------*/
+.head {
+	display: flex;
+    flex-direction: row;
+    padding: 1rem 0 0 0;
+}
+
+.head h1 { 
+    padding: 1rem 0;
+	font-weight: 700;
+	letter-spacing: 3px;
+}
+.snsbox {
+	margin-left: auto;
+	font-size: 3.0rem;
+	padding: 1rem 0 0 0;
+}
+nav ul {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+	margin-bottom: 0.5rem;
+}
+nav li {
+    display: block;
+    flex: 0 0 15%;
+}
+nav li a {
+    text-decoration: none;
+    text-align: center;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+nav a {
+    padding: 1rem;
+}
+
+@media screen and (min-width: 768px){
+/* PC時はMENUボタンを非表示 */
+#open,#close {
+    display: none !important;
+}
+
+#navi {
+    display: block !important;
+}
+}
+
+@media screen and (max-width: 768px){
+.head {
+	flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.telbox {
+	margin-left: 0;
+	text-align: center;
+}
+.head #open,#close  {
+    position: absolute;
+    top: 28px;
+    right: 12px;
+    }
+nav ul {
+	flex-direction: column;
+}
+
+nav li {
+	padding-top: 0;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 0;
+}
+/* スマホ時はMENUボタンを表示 */
+#open,#close  {
+    display: block;
+    width: 50px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+}
+/* スマホ時はメニューを非表示 */
+#navi {
+    display: none;
+}
+}
+
+/*メイン画像
+-------------------------------------*/
+.mainimg img {
+	width: 100vw;
+}
+
+/*メインコンテンツ
+-------------------------------------*/
+main {
+    margin: 5rem 0 5rem 0;
+}
+
+/*キャッチタイトル
+-------------------------------------*/
+h2.catch {
+	text-align: center;
+	color: #666;
+	font-size: 4.0rem;
+	margin-bottom: 3rem;
+}
+
+/*フッター
+-------------------------------------*/
+footer {
+    background-color: #fff;
+    padding: 3rem 0;
+}
+footer h5 {
+    border-bottom: 1px solid #ccc;
+}
+
+/*コピーライト
+-------------------------------------*/
+.copyright {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #fff;
+}
+.copyright a {
+    color: #000;
+    text-decoration: none;
+	display: inline-block;
+}
+
+/*ページトップへ戻るボタン
+-------------------------------------*/
+#pagetop {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+#pagetop a {
+    display: block;
+    background: #666;
+    color: #fff;
+    width: 50px;
+    padding: 10px 5px;
+    text-align: center;
+}
+#pagetop a:hover {
+    background: #999;
+}
+/*パンくずリスト
+-----------------------------------*/
+.breadcrumb {
+    margin: 0 0 1em 0;
+    padding: 0;	
+}
+.breadcrumb li {
+    list-style-type: none;
+}
+.breadcrumb li a {
+    display: inline-block;
+    color: #959fa5;
+}
+
+
+</style>

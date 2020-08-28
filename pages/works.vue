@@ -1,39 +1,9 @@
 <template>
-  <div id="app">
+<div>
 <navbar />
-  <!--nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <NuxtLink class="text-white px-3" to="/">home</NuxtLink>
-                </li>
-                <li class="nav-item">
-                    <NuxtLink class="text-white px-3" to="/blog">blog</NuxtLink>
-                </li>
-                </ul>
-            </div>
-    </nav-->
+<!-- Navbarここまで -->
 
-    <div class="mainimg">
-              <img src="../assets/img/mainimg.jpg" alt="メイン画像">
-        </div>
-
-
-
-        
-  <main class="main">
-<section id="aboutme" style="margin-top: 100px; margin-bottom: 100px;" class="mx-4">
-
-  <b-card img-src="https://placekitten.com/300/300" img-alt="Card image" img-left class="mb-3">
-      <h3>Ayaka Oumra</h3>
-      <b-card-text>
-        Some quick example text to build on the card and make up the bulk of the card's content.
-      </b-card-text>
-    </b-card>
-</section>
-
-
-  <section>
+<section>
   <div class="container">
 	<h2 class="catch">Works</h2>
 <div class="row">
@@ -75,56 +45,25 @@
 		<figcaption>キャプション</figcaption>
 		</figure>
 	</div>
-    </div> 
-	<p class="center"><button><NuxtLink to="/works">その他のギャラリー</NuxtLink></button></p>
+    </div>
         </div>
 </section>
-    </main>
-  </section>
-  </main>
 
-<footer>
-<div class="container">
-<div class="row">
-    <div class="col span-4">
-        <h5>Twitter</h5>
-        <p>ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。</p>
-    </div>
-    <div class="col span-4">
-        <h5>Instagram</h5>
-        <p>ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。</p>
-    </div>
-    <div class="col span-4">
-        <h5>Linkedin</h5>
-        <p>ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。</p>
-    </div>
-        </div>
+
+
+
 </div>
-    </footer>
-
-
-  <!--li v-for="post of posts" :key="post.slug">
-      <NuxtLink :to="post.slug">{{ post.title }}</NuxtLink>
-    </li-->
-  
-  </div>
 </template>
 
+
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
   components: {
   },
   head() {
     return {
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
-      {
-        src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
-      }
-      ],
-
+      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
     };
   },
   async asyncData({ $content }) {
@@ -136,6 +75,7 @@ export default {
   },
 }
 </script>
+
 
 <style>
 /*

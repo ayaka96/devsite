@@ -1,34 +1,12 @@
 <template>
+
 <v-app>
 <div>
-
 <navbar />
 
-
-<!-- Navbarここまで -->
+<section>
 <div v-for="post of posts" :key="post.slug" class="mx-auto" style="width: 400px; margin: 20px;">
-    <img :src="post.image">
-
-    <!--img-src="https://picsum.photos/600/300/?image=25"-->
-<b-card
-    :img-src="post.image"
-    img-alt="Image"
-    img-top
-    tag="article"
-    style="max-width: 40rem;"
-    class="mb-2"
-  >
-  <h3>{{ post.title }}</h3>
-    <b-card-text>
-    {{ post.description }}
-    </b-card-text>
-    <NuxtLink :to="post.slug">
-    <b-button variant="primary">{{ post.title }}</b-button>
-    </NuxtLink>
-  </b-card>
-  </div>
-
-
+<NuxtLink :to="post.slug">
 <v-card
     class="mx-auto"
     max-width="400"
@@ -36,35 +14,19 @@
     <v-img
       class="white--text align-end"
       height="200px"
-      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+      :src="post.image"
     >
-      <v-card-title>Top 10 Australian beaches</v-card-title>
+      <v-card-title style="font-size: 20px;">{{ post.title }}</v-card-title>
     </v-img>
-
-    <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>
-
     <v-card-text class="text--primary">
-      <div>Whitehaven Beach</div>
-
-      <div>Whitsunday Island, Whitsunday Islands</div>
+    
+      <div>{{ post.description }}</div>
     </v-card-text>
-
-    <v-card-actions>
-      <!--v-btn
-        color="orange"
-        text
-      >
-        Share
-      </v-btn>
-
-      <v-btn
-        color="orange"
-        text
-      >
-        Explore
-      </v-btn-->
-    </v-card-actions>
   </v-card>
+</NuxtLink>
+</div>
+
+</section>
 </div>
 </v-app>
 </template>
@@ -72,9 +34,11 @@
 
 <script>
 import navbar from '../components/navbar';
+import blogList from '../components/blogList';
 export default {
   components: {
-      navbar
+      navbar,
+      blogList
   },
   head() {
     return {

@@ -1,27 +1,34 @@
 <template>
+
 <div>
-<navbar />
-<!-- Navbarここまで -->
-
-<section>
-  <div class="container">
-	<h2 class="catch">Works</h2>
-
-    </div>
-</section>
-
-<!--worksList /-->
-
+<div v-for="post of posts" :key="post.slug" class="mx-auto" style="width: 400px; margin: 20px;">
+<NuxtLink :to="post.slug">
+<v-card
+    class="mx-auto"
+    max-width="400"
+  >
+    <v-img
+      class="white--text align-end"
+      height="200px"
+      :src="post.image"
+    >
+      <v-card-title style="font-size: 20px;">{{ post.title }}</v-card-title>
+    </v-img>
+    <v-card-text class="text--primary">
+    
+      <div>{{ post.description }}</div>
+    </v-card-text>
+  </v-card>
+</NuxtLink>
+</div>
 
 </div>
 </template>
 
 
 <script>
-import worksList from '../components/worksList';
 export default {
   components: {
-      //worksList
   },
   head() {
     return {
@@ -29,7 +36,7 @@ export default {
     };
   },
   async asyncData({ $content }) {
-    const posts = await $content("works").fetch();
+    const posts = await $content("blog").fetch();
 
     return {
       posts,

@@ -1,6 +1,6 @@
 <template>
 <div>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!--nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -11,27 +11,67 @@
                 </li>
                 </ul>
             </div>
+        </nav-->
+<header>    
+<div class="container">
+<div class="row">
+    <div class="col span-12">
+    <div class="head">
+        <h1><a href="index.html">Ayaka Omura</a></h1>
+		<div class="snsbox">
+			<img src="../assets/img/in-icon.png" alt="Instagram">
+		    <img src="../assets/img/fb-icon.png" alt="Facebook"></div>
+        </div>
+    </div></div>
+    
+<div class="row">
+    <div class="col span-12">
+        <nav>
+        <div id="open"><img src="../assets/img/button.png"></div>
+        <div id="close"><img src="../assets/img/button2.png"></div>    
+            <div id="navi">
+        <ul>
+            <li><a href="/">ホーム</a></li>
+            <li><NuxtLink to="/blog">Blog</NuxtLink></li>
+            <!--li><a href="subpage.html">サブページ</a></li>
+            <li><a href="subpage.html">サブページ</a></li>
+            <li><a href="subpage.html">お問い合わせ</a></li-->
+            </ul>
+                </div>
         </nav>
+    </div>
+        </div>
+    </div>
+    </header>
+
+
+
 <!-- Navbarここまで -->
-<li v-for="post of posts" :key="post.slug">
+<div v-for="post of posts" :key="post.slug" class="mx-auto" style="width: 400px; margin: 20px;">
       
 <b-card
-    title="Card Title"
     img-src="https://picsum.photos/600/300/?image=25"
     img-alt="Image"
     img-top
     tag="article"
-    style="max-width: 20rem;"
+    style="max-width: 40rem;"
     class="mb-2"
+    title=""
   >
+  <h3>{{ post.title }}</h3>
     <b-card-text>
-      Some quick example text to build on the card title and make up the bulk of the card's content.
+    {{ post.description }}
     </b-card-text>
     <NuxtLink :to="post.slug">
-    <b-button href="" variant="primary">{{ post.title }}</b-button>
+    <b-button variant="primary">{{ post.title }}</b-button>
     </NuxtLink>
   </b-card>
-  </li>
+  </div>
+
+
+
+
+
 </div>
 </template>
 

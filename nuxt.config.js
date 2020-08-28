@@ -73,7 +73,7 @@ export default {
   ** https://github.com/nuxt-community/vuetify-module
   */
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    /*customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: true,
       themes: {
@@ -87,7 +87,7 @@ export default {
           success: colors.green.accent3
         }
       }
-    }
+    }*/
   },
   /*
   ** Build configuration

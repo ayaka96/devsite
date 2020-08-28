@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <!--v-app dark>
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -85,7 +85,7 @@
     >
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
-  </v-app>
+  </v-app-->
 </template>
 
 <script>

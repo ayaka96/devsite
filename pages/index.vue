@@ -1,5 +1,5 @@
 <template>
-  <v-layout
+  <!--v-layout
     column
     justify-center
     align-center
@@ -81,7 +81,7 @@
         </v-card-actions>
       </v-card>
     </v-flex>
-  </v-layout>
+  </v-layout-->
 </template>
 
 <script>

@@ -1,7 +1,6 @@
 <template>
-  <div id="blog">
-  <header />
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -13,28 +12,31 @@
                 </ul>
             </div>
         </nav>
-  
-
-
-
-
-
-
-  <li v-for="post of posts" :key="post.slug">
-      <NuxtLink :to="post.slug">{{ post.title }}</NuxtLink>
-    </li>
-  
-  <div id="app1">
-    <img src="../static/v.png">
-    <router-view/>
-    <button class="btn btn-primary">test</button>
-  </div>
-  </div>
+<!-- Navbarここまで -->
+<li v-for="post of posts" :key="post.slug">
+      
+<b-card
+    title="Card Title"
+    img-src="https://picsum.photos/600/300/?image=25"
+    img-alt="Image"
+    img-top
+    tag="article"
+    style="max-width: 20rem;"
+    class="mb-2"
+  >
+    <b-card-text>
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+    </b-card-text>
+    <NuxtLink :to="post.slug">
+    <b-button href="" variant="primary">{{ post.title }}</b-button>
+    </NuxtLink>
+  </b-card>
+  </li>
+</div>
 </template>
 
+
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
   components: {

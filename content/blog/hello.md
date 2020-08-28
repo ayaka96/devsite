@@ -1,18 +1,30 @@
 ---
 title: Getting started
-description: 'Empower your NuxtJS application with @nuxt/content module: write in a content/ directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a Git-based Headless CMS.'
+date: 2020-08-28T11:42:12.668Z
+description: "Empower your NuxtJS application with @nuxt/content module: write
+  in a content/ directory and fetch your Markdown, JSON, YAML and CSV files
+  through a MongoDB like API, acting as a Git-based Headless CMS."
 ---
+はじめての投稿をしてみる。
 
-Empower your NuxtJS application with `@nuxtjs/content` module: write in a `content/` directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a **Git-based Headless CMS**.
+文章を人に向けて発信するのはいつぶりだろうか。中学生の時にやっていたアメーバブログが最後なのではなかろうか。
 
-## Writing content
+私は自分自身のためだけの文章を書き続けて久しい。だれにも見られないところで、純粋な心の発露としての考えや感情を言語に落とし込み、外に形として現れてくれた自身の内面を確認することは、私に平安をもたらす。
 
-Learn how to write your `content/`, supporting Markdown, YAML, CSV and JSON: https://content.nuxtjs.org/writing.
+しかし、人に見てもらうための文を書く時、私はそこで起こっているだけの純粋な発露を発揮できるのだろうか。何か人目を意識することでノイズを生じさせてしまわないか、不安で仕方がない。
 
-## Fetching content
+それでも、できるだけ純粋にできるだけ誠実に言葉を綴ることは、純粋さを失うことを恐れてハナから何も書かないでいるよりは遥かにマシであると信じて、ここでさまざまな議論や共有をしていきたい。気が向いたら、どうかお付き合いください。
 
-Learn how to fetch your content with `$content`: https://content.nuxtjs.org/fetching.
+最後に自己紹介で締めます。
 
-## Displaying content
+1996年生まれ、B型、さそり座、五人きょうだいの長子(極度のブラコン)
 
-Learn how to display your Markdown content with the `<nuxt-content>` component directly in your template: https://content.nuxtjs.org/displaying.
+性格: だいたいの事に寛容、面白さ至上主義、ある側面において頑固、生真面目、フットワークが軽い
+
+好きなもの: 古今東西普遍の愛、季節を感じる風、ともだち、洋プログレ、色彩豊かな絵画、人文哲学分野の本、電話、直感
+
+嫌いなもの: 特定の虫、人を嫌な気持ちにさせる言葉、正当な思考プロセスを踏んでいない結論
+
+
+
+読んでくださりありがとうございました😊

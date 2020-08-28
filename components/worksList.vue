@@ -54,6 +54,11 @@ export default {
 
       return dist;
     }
+  },
+  data(){
+      return{
+          
+      }
   }
 }
 </script>

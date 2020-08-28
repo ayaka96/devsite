@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col span-12">
     <div class="head">
-        <h1><a href="index.html">Ayaka Omura</a></h1>
+        <h1><a href="/">Ayaka Omura</a></h1>
 		<div class="snsbox">
 			<img src="../assets/img/in-icon.png" alt="Instagram">
 		    <img src="../assets/img/fb-icon.png" alt="Facebook"></div>

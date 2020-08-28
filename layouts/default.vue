@@ -86,6 +86,9 @@
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app-->
+  <div>
+  <Nuxt />
+  </div>
 </template>
 
 <script>

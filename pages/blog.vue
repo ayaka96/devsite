@@ -1,11 +1,22 @@
 <template>
-
-<v-app>
 <div>
 <navbar />
 
 <section>
-<div v-for="post of posts" :key="post.slug" class="mx-auto" style="width: 400px; margin: 20px;">
+<v-card
+    class="mx-auto"
+    max-width="500"
+  >
+    <v-container fluid>
+      <v-row dense>
+        <v-col
+          v-for="post in posts"
+          cols="6"
+          :key="post.slug"
+          class="mx-auto"
+          style="width: 400px; margin: 20px;"
+        >
+
 <NuxtLink :to="post.slug">
 <v-card
     class="mx-auto"
@@ -18,17 +29,23 @@
     >
       <v-card-title style="font-size: 20px;">{{ post.title }}</v-card-title>
     </v-img>
+
     <v-card-text class="text--primary">
-    
       <div>{{ post.description }}</div>
     </v-card-text>
+  
+  
   </v-card>
 </NuxtLink>
-</div>
+
+</v-col>
+</v-row>
+</v-container>
+</v-card>
 
 </section>
 </div>
-</v-app>
+
 </template>
 
 

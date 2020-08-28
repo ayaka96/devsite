@@ -5,6 +5,10 @@ description: "Empower your NuxtJS application with @nuxt/content module: write
   in a content/ directory and fetch your Markdown, JSON, YAML and CSV files
   through a MongoDB like API, acting as a Git-based Headless CMS."
 ---
+![](../assets/VD1B07_2.JPG)
+
+
+
 はじめての投稿をしてみる。
 
 文章を人に向けて発信するのはいつぶりだろうか。中学生の時にやっていたアメーバブログが最後なのではなかろうか。
@@ -24,7 +28,5 @@ description: "Empower your NuxtJS application with @nuxt/content module: write
 好きなもの: 古今東西普遍の愛、季節を感じる風、ともだち、洋プログレ、色彩豊かな絵画、人文哲学分野の本、電話、直感
 
 嫌いなもの: 特定の虫、人を嫌な気持ちにさせる言葉、正当な思考プロセスを踏んでいない結論
-
-
 
 読んでくださりありがとうございました😊

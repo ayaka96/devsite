@@ -1,5 +1,6 @@
 ---
 title: Getting started
+image: ../img/VD1B07_2.JPG
 date: 2020-08-28T11:42:12.668Z
 description: "Empower your NuxtJS application with @nuxt/content module: write
   in a content/ directory and fetch your Markdown, JSON, YAML and CSV files

@@ -18,18 +18,30 @@
           cols="12"
         >
           <v-card>
-            <v-img
+            <!--v-img
               :src="card.image"
               class="white--text align-end"
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
               height="200px"
             >
-              <v-card-title v-text="card.title"></v-card-title>
+              <v-card-title v-text="card.title"
+              ></v-card-title>
+              <h3 style="text-align:right;">{{card.title}}</h3>
             </v-img>
-
             <v-card-actions>
               <v-spacer></v-spacer>
-            </v-card-actions>
+            </v-card-actions-->
+            <v-img
+      class="white--text align-end"
+      height="200px"
+      :src="card.image"
+    >
+    </v-img>
+
+    <v-card-text class="text--primary">
+      <div style="font-size:20px;">{{ card.title }}</div>
+    </v-card-text>
+  
           </v-card>
         </v-col>
       </v-row>
@@ -56,10 +68,10 @@ export default {
     };
   },
   async asyncData({ $content }) {
-    const posts = await $content("works").fetch();
+    const works = await $content("works").fetch();
 
     return {
-      posts,
+      works,
     };
   },
 }

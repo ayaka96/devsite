@@ -9,7 +9,7 @@
   <main class="main">
 <section id="aboutme" style="margin-top: 100px; margin-bottom: 100px;" class="mx-4">
 
-  <b-card img-src="https://placekitten.com/300/300" img-alt="Card image" img-left class="mb-3">
+  <b-card img-src="../assets/img/profilePhoto.jpg" style="max-width:200rem;" img-alt="Card image" img-left class="mb-3">
       <h3>Ayaka Oumra</h3>
       <b-card-text>
         Some quick example text to build on the card and make up the bulk of the card's content.
@@ -21,47 +21,7 @@
   <section>
   <div class="container">
 	<h2 class="catch">Works</h2>
-<div class="row">
-	<div class="col span-4">
-	<figure>
-		<img src="../assets/img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
-		</figure>
-	</div>
-	<div class="col span-4">
-	<figure>
-		<img src="../assets/img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
-		</figure>
-	</div>
-	<div class="col span-4">
-	<figure>
-		<img src="../assets/img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
-		</figure>
-	</div>
-    </div>    
-<div class="row">
-	<div class="col span-4">
-	<figure>
-		<img src="../assets/img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
-		</figure>
-	</div>
-	<div class="col span-4">
-	<figure>
-		<img src="../assets/img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
-		</figure>
-	</div>
-	<div class="col span-4">
-	<figure>
-		<img src="../assets/img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
-		</figure>
-	</div>
-    </div> 
-	<p class="center"><button><NuxtLink to="/works">その他のギャラリー</NuxtLink></button></p>
+	<p class="center"><button><NuxtLink to="/works">ギャラリー</NuxtLink></button></p>
         </div>
 </section>
     </main>
@@ -114,6 +74,7 @@ export default {
   },
   async asyncData({ $content }) {
     const posts = await $content("blog").fetch();
+    const works = await $content("works").fetch();
 
     return {
       posts,

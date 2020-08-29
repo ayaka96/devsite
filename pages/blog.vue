@@ -3,6 +3,7 @@
 <navbar />
 
 <section>
+<h2 class="catch">Blog</h2>
 <v-card
     class="mx-auto"
     max-width="500"
